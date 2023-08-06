@@ -1,0 +1,13 @@
+{
+    "element":{
+        "name":"",
+        "Named":null,
+        "image":"images/img",
+        "text_form":"hello",
+        "chemicals_used":"HCl",
+        "catalysts":"Pyridine",
+        "Products":"R-Cl",
+        "chapter":null
+
+    }
+}
