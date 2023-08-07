@@ -38,6 +38,9 @@ function generatetags(data) {
     tagsArray = tagsArray.concat(data.chemicals_used)
     tagsArray = tagsArray.concat(data.needs)
     tagsArray = tagsArray.concat(data.products)
+    if (data.named){
+        tagsArray.push("Named")
+    }
 
     tagsArray = removeNullElements(tagsArray)
     
