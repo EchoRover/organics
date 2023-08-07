@@ -1,6 +1,6 @@
 :root{
     --text: rgb(7, 12, 23);
-    --background: rgb(226, 229, 236);
+    --background: rgba(230, 225, 225, 0.674);
     --primary: rgb(197, 177, 134);
     --secondary: rgb(233, 239, 204);
     --accent: rgb(170, 207, 255);
@@ -33,7 +33,7 @@ button:hover{
 }
 
 header{
-    background-color: rgb(255, 246, 144);
+    background-color: rgb(231, 238, 240);
 }
 header{
     display: flex;
@@ -60,13 +60,14 @@ header{
     text-align: center;
     align-self: center;
     font-size: 2.4rem;
-    color: rgb(227, 140, 25);
+    color: rgb(12, 95, 48);
+    font-weight: bolder;
 }
 
 #grid-of-reactions{
     padding: 5px 5px;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
     gap: 20px;
     
 }
@@ -86,7 +87,7 @@ header{
     border:none;
     border-radius: 8px;
     gap: 5px;
-    background-color: bisque;
+    background-color: rgba(204, 219, 225, 0.461);
     
     
     
@@ -122,12 +123,13 @@ header{
 
 
 .reaction .info > div{
+    color: rgb(255, 255, 255);
     
-    background-color: rgb(181, 218, 171);
+    background-color: rgb(33, 112, 11);
 }
 .reaction .info > div:hover{
     
-    background-color: rgb(170, 218, 157);
+    background-color: rgb(55, 122, 37);
 }
 
 .reaction .info .heading{
@@ -135,6 +137,8 @@ header{
 }
 
 .reaction .name{
+    color: #0372a6;
+    font-style: italic;
     font-size: 1.3rem;
     font-weight: bold;
 }
@@ -150,16 +154,24 @@ header{
     padding: 5px 12px;
     border-radius: 6px;
     border: none;
-    background-color: var(--primary);
+    background-color: #187AC9;
+    color: white;
     font-size: 0.9rem;
     
 
 }
 
 .reaction button:hover{
-    transition: background-color 0.5s;
+    transition: background-color 0.1s;
+    
 
-    background-color: rgb(232, 205, 148);
+
+    background-color:#4a8ec6;
+}
+
+.reaction button:active{
+    transition: transform 0.2s;
+    transform: scale(1.05);
 }
 
 .reaction .tags{
