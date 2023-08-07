@@ -9,5 +9,27 @@
         "products": ["H2O","RCl"],
         "chapter": "haloalkanes",
         "tags": ["MyFirstReaction"]
+    },
+    {
+        "name": "whehe",
+        "named": false,
+        "image": "images/",
+        "text_form": null,
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+    },
+    {
+        "name": "name",
+        "named": false,
+        "image": "images/",
+        "text_form": null,
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": null,
+        "tags": []
     }
 ]
