@@ -1,14 +1,4 @@
-const element = {
-    "name": "Grooves_Process",
-    "named": true,
-    "image": "images/",
-    "text_form": null,
-    "chemicals_used": "ROH",
-    "needs": "HCl ,anhy ZnCl2",
-    "products": "RCl + H3O",
-    "chapter": "haloalkanes",
-    "tags": []
-}
+
 
 const colors = []
 
@@ -44,30 +34,35 @@ function createtagdivs(tagsArray) {
 }
 
 function generatetags(data) {
-    var tagsArray = data.tags.concat([data.name, data.chapter, data.text_form, data.chemicals_used, data.needs, data.products]);
+    var tagsArray = data.tags.concat([data.name, data.chapter, data.text_form]);
+    tagsArray = tagsArray.concat(data.chemicals_used)
+    tagsArray = tagsArray.concat(data.needs)
+    tagsArray = tagsArray.concat(data.products)
+
     tagsArray = removeNullElements(tagsArray)
-    console.log(tagsArray);
+    
     return tagsArray;
 }
 
 
 
 
-function createreaction(data) {
+function createreaction(data, uniqueid) {
     const container = document.getElementById("grid-of-reactions");
+    const allthetags = generatetags(data)
 
-    const tags = createtagdivs(generatetags(data))
+    const tags = createtagdivs(allthetags)
 
     var the_name = ""
 
-    if (data.named){
+    if (data.named) {
         var the_name = "named"
     }
 
 
     const box = `
 
-    <div class = "reaction " style = "background-color:${getRandomElementFromArray(colors)}">
+    <div class = "reaction " style = "background-color:${getRandomElementFromArray(colors)}" id = "id${uniqueid}">
             <div class = "name  ${the_name}">${data.name}</div>
             <div class = "image"><img src = "data/images/${data.name.toLowerCase()}.png" onerror="setDefaultImage(this)"></div>
             <div class = "info">
@@ -104,33 +99,97 @@ function createreaction(data) {
 
     // <div class="tags">${data.tags} ${data.text_form}</div>
     container.innerHTML += box
+    return allthetags
 
 
 }
 
-async function fetchData() {
-    try {
-        const response = await fetch("data/data.json");
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error("Error fetching data:", error);
-        throw error;
+function convertObjectValuesToLower(obj) {
+    if (typeof obj !== "object" || obj === null) {
+      return obj;
     }
+  
+    if (Array.isArray(obj)) {
+      return obj.map((item) => convertObjectValuesToLower(item));
+    }
+  
+    const lowerCasedObject = {};
+    for (const key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        const value = obj[key];
+        lowerCasedObject[key] =
+          typeof value === "string" ? value.toLowerCase() : convertObjectValuesToLower(value);
+      }
+    }
+  
+    return lowerCasedObject;
+  }
+
+  function convertToLowerCase(value) {
+    if (typeof value === "string") {
+      return value.toLowerCase();
+    } else if (Array.isArray(value)) {
+      return value.map(convertToLowerCase);
+    } else if (typeof value === "object" && value !== null) {
+      const newObj = {};
+      for (const key in value) {
+        if (value.hasOwnProperty(key)) {
+          newObj[key] = convertToLowerCase(value[key]);
+        }
+      }
+      return newObj;
+    } else {
+      return value;
+    }
+  }
+  
+  // Example object
+  const exampleObject = {
+    name: "Grooves_Process",
+    named: true,
+    chemicals_used: "ROH",
+    needs: "HCl ,anhy ZnCl2",
+    Products: "RCl + H3O",
+    chapter: "haloalkanes",
+    tags: ["hello", "bas", "why"],
+  };
+  
+  
+  
+  
+  
+  
+  
+
+function loadDataFromJsonFile(fileUrl) {
+    return fetch(fileUrl)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .catch((error) => {
+            console.error("Error loading data:", error);
+            throw error;
+        });
 }
 
 async function create_all_reactions() {
     try {
-        const data = await fetchData();
-        data.forEach(element => {
-            createreaction(element);
+        const data = await loadDataFromJsonFile("data/data.json");
+        data.forEach((element, index) => {
+            tags = createreaction(element, index);
+            element.tags = tags
+
+            allthedata.push(convertToLowerCase(element))
         });
     } catch (error) {
         console.error("Error:", error);
     }
 }
 
-create_all_reactions();
+
 
 
 
@@ -164,9 +223,25 @@ function showhidetags(element) {
 }
 
 const searchInput = document.getElementById("search");
-
+function checkIfTextExists(textToFind, tags) {
+    return tags.some(tag => tag.toLowerCase().startsWith(textToFind.toLowerCase()));
+  }
 
 searchInput.addEventListener("input", (event) => {
-    const value = event.target.value
+    const value = event.target.value.toLowerCase()
     console.log(value)
+    
+    
+    allthedata.forEach((reaction,index) =>{
+        const isvisible = checkIfTextExists(value,reaction.tags)
+        const element = document.getElementById(`id${index}`)
+        element.classList.toggle("hide",!isvisible)
+    })
 })
+
+
+allthedata = []
+
+create_all_reactions();
+
+console.log(allthedata)
