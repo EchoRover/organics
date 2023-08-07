@@ -1,13 +1,14 @@
 {
-    "element":{
+    "reaction":{
         "name":"",
-        "Named":null,
-        "image":"images/img",
+        "named":null,
+        "image":"images/",
         "text_form":"hello",
         "chemicals_used":"HCl",
-        "catalysts":"Pyridine",
+        "needs":"Pyridine",
         "Products":"R-Cl",
-        "chapter":null
+        "chapter":null,
+        "tags":[]
 
     }
 }
