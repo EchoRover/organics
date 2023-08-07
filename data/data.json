@@ -1,23 +1,23 @@
 [
     {
-        "name": "",
-        "named": null,
+        "name": "Grooves_Process",
+        "named": false,
         "image": "images/",
-        "text_form": "hello",
-        "chemicals_used": "HCl",
-        "needs": "Pyridine",
-        "Products": "R-Cl",
-        "chapter": null,
+        "text_form": null,
+        "chemicals_used": "ROH",
+        "needs": "HCl ,anhy ZnCl2",
+        "products": "RCl + H3O",
+        "chapter": "haloalkanes",
         "tags": []
     },
     {
-        "name": "Grooves Process",
+        "name": "Grooves_Process",
         "named": true,
         "image": "images/",
         "text_form": "roh + hcl",
         "chemicals_used": "ROH",
         "needs": "HCl anhy ZnCl2",
-        "Products": "RCl + H3O",
+        "products": "RCl + H3O",
         "chapter": "haloalkanes",
         "tags": []
     }
