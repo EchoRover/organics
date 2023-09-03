@@ -4,32 +4,360 @@
         "named": true,
         "image": "images/",
         "text_form": null,
-        "chemicals_used": ["ROH"],
-        "needs": ["HCl","anhy ZnCl2"],
-        "products": ["H2O","RCl"],
+        "chemicals_used": [
+            "ROH"
+        ],
+        "needs": [
+            "HCl",
+            "anhy ZnCl2"
+        ],
+        "products": [
+            "H2O",
+            "RCl"
+        ],
         "chapter": "haloalkanes",
-        "tags": ["MyFirstReaction"]
+        "tags": [
+            "MyFirstReaction"
+        ]
     },
     {
-        "name": "whehe",
+        "name": "haloalkanes from alcohols",
         "named": false,
         "image": "images/",
-        "text_form": null,
+        "text_form": "ROH + HCl -> RCl + H2O",
+        "chemicals_used": [
+            "ROH",
+            "HX"
+        ],
+        "needs": [
+            "ZnCl2(1*,2*)"
+        ],
+        "products": [
+            "RCl"
+        ],
+        "chapter": "Haloalkanes",
+        "tags": [
+            "halogen acids",
+            "cl,br,I",
+            "HI>HBr>HCL",
+            "from OH"
+        ]
+    },
+    {
+        "name": "haloalkanes from phosphours halids",
+        "named": false,
+        "image": "images/",
+        "text_form": "ROH + PX3 -> R-X + H3PO4",
+        "chemicals_used": [
+            "ROH",
+            "PX3"
+        ],
+        "needs": [
+            "x = cl,br"
+        ],
+        "products": [
+            "R-X"
+        ],
+        "chapter": "haloalkanes",
+        "tags": [
+            "from OH"
+        ]
+    },
+    {
+        "name": "haloalkanes from Pcl5",
+        "named": false,
+        "image": "images/",
+        "text_form": "ROH + PCl5 - > RCl + POCL3 + HCl",
+        "chemicals_used": [
+            "ROH",
+            "PCL5"
+        ],
+        "needs": [],
+        "products": [
+            "RCl",
+            "POCL3",
+            "HCl"
+        ],
+        "chapter": "haloalkanes",
+        "tags": [
+            "from OH"
+        ]
+    },
+    {
+        "name": "haloalkanes from red phosphours",
+        "named": false,
+        "image": "images/",
+        "text_form": "ROH + red Px2 -> RX",
+        "chemicals_used": [
+            "ROH",
+            "red PX2"
+        ],
+        "needs": [
+            "x2 = Br2 I2"
+        ],
+        "products": [
+            "R-X"
+        ],
+        "chapter": "haloalkanes",
+        "tags": [
+            "from OH"
+        ]
+    },
+    {
+        "name": "haloalkanes from thionly chloride",
+        "named": false,
+        "image": "images/",
+        "text_form": "ROH + SOCl2 -> RCl + so2^ + HCL^",
+        "chemicals_used": [
+            "ROH",
+            "SOCl2"
+        ],
+        "needs": [],
+        "products": [
+            "RCl",
+            "HCl",
+            "SO2^"
+        ],
+        "chapter": "Haloalkanes",
+        "tags": [
+            "from OH",
+            "Best method for chloroalkane"
+        ]
+    },
+    {
+        "name": "Free Radical Halogenation Alkanes",
+        "named": false,
+        "image": "images/",
+        "text_form": "R + CL2/UV -> R-CL(complex)",
+        "chemicals_used": [
+            "R",
+            "Cl2"
+        ],
+        "needs": [
+            "UV/Heat"
+        ],
+        "products": [
+            "RCL(complex)"
+        ],
+        "chapter": "Haloalkanes",
+        "tags": []
+    },
+    {
+        "name": "Addition of Hydrogen Halide to Alkene",
+        "named": false,
+        "image": "images/",
+        "text_form": "r- c=c - r + HX -> r-c(x)-c-",
+        "chemicals_used": [
+            "Alkene",
+            "HX"
+        ],
+        "needs": [
+            "x = cl,br,i"
+        ],
+        "products": [
+            "R-C(X)-C-R"
+        ],
+        "chapter": "Haloalkanes",
+        "tags": [
+            "Marknoinkove Rule"
+        ]
+    },
+    {
+        "name": "Addition of Halide to Alkene",
+        "named": false,
+        "image": "images/",
+        "text_form": "R- C=C-R + Br2 -> Br-C - C- Br",
+        "chemicals_used": [
+            "Alkene",
+            "Br2"
+        ],
+        "needs": [
+            "CCl4"
+        ],
+        "products": [
+            "Br - C = C - Br"
+        ],
+        "chapter": "Haloalkanes",
+        "tags": [
+            "Vic dihalide"
+        ]
+    },
+    {
+        "name": "Finkelstein",
+        "named": true,
+        "image": "images/",
+        "text_form": "RX + NaI - > RI + NaX",
+        "chemicals_used": [
+            "RX",
+            "NaI"
+        ],
+        "needs": [
+            "Acetone",
+            "x = cl,br"
+        ],
+        "products": [
+            "RI",
+            "NaX"
+        ],
+        "chapter": "Haloalkanes",
+        "tags": [
+            "Haloge Exchange"
+        ]
+    },
+    {
+        "name": "Swarts",
+        "named": true,
+        "image": "images/",
+        "text_form": "RX + AgF - > RF + AgX",
+        "chemicals_used": [
+            "RX",
+            "AgX"
+        ],
+        "needs": [
+    
+            "x = cl,br"
+        ],
+        "products": [
+            "RF",
+            "AgX"
+        ],
+        "chapter": "Haloalkanes",
+        "tags": [
+            "Haloge Exchange"
+        ]
+    },
+    {
+        "name": "Electophlic Substitution of Aromatic HC",
+        "named": false,
+        "image": "images/",
+        "text_form": "Toluene + X2 - > o/p-halotoluene",
+        "chemicals_used": ["Toluene","X"],
+        "needs": ["Fe dark","/Fecl3","FeBr3","AlCl3","x = cl,br"],
+        "products": ["o/p-halotoluene"],
+        "chapter": "Haloalkanes",
+        "tags": ["lewis acides","ortho and para easly separated due to boiling point difference"]
+        
+    },
+    {
+        "name": "Electophlic Substitution of Aromatic HC Iodebenzene",
+        "named": false,
+        "image": "images/",
+        "text_form": "Toluene + I2  -> iodotoluene",
+        "chemicals_used": ["Toluene","I2"],
+        "needs": ["HNO3","/HIO4"],
+        "products": ["iodotoluene"],
+        "chapter": "Haloalkanes",
+        "tags": ["iodotoluene"]
+        
+    },
+    {
+        "name": "Sandmeyers reaction",
+        "named": true,
+        "image": "images/",
+        "text_form": "aniline + NaNO2 + HX(273- 278k) - > C6H5(N2X) + Cu2X2 -> arly halide + N2",
+        "chemicals_used": ["aniline","NaN02","HX","Cu2X2"],
+        "needs": ["273 - 278k","x = cl,br"],
+        "products": ["aryle halide","N2"],
+        "chapter": "Haloalkanes",
+        "tags": ["start from aniline"]
+        
+    },
+    {
+        "name": "Gattermann reaction",
+        "named": true,
+        "image": "images/",
+        "text_form": "aniline + NaNO2 + HX(273- 278k) - > C6H5(N2X) KI -> iodobenzene + N2^",
+        "chemicals_used": ["aniline","NaN02","HX","KI"],
+        "needs": ["273 - 278k","x = cl,br"],
+        "products": ["iodobenzene","N2"],
+        "chapter": "Haloalkanes",
+        "tags": ["start from aniline"]
+        
+    },
+    {
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
         "chemicals_used": [],
         "needs": [],
         "products": [],
         "chapter": "Haloalkanes",
         "tags": []
+        
     },
     {
-        "name": "name",
+        "name": "",
         "named": false,
         "image": "images/",
-        "text_form": null,
+        "text_form": "",
         "chemicals_used": [],
         "needs": [],
         "products": [],
-        "chapter": null,
+        "chapter": "Haloalkanes",
         "tags": []
+        
+    },
+    {
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },
+    {
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },
+    {
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },
+    {
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },
+    {
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
     }
+
+    
 ]
