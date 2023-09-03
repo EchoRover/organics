@@ -260,7 +260,7 @@
         "needs": ["273 - 278k","x = cl,br"],
         "products": ["aryle halide","N2"],
         "chapter": "Haloalkanes",
-        "tags": ["start from aniline"]
+        "tags": ["start from aniline","steps"]
         
     },
     {
@@ -390,7 +390,7 @@
         
     },
     {
-        "name": "",
+        "name": "Nitration",
         "named": false,
         "image": "images/",
         "text_form": "",
@@ -402,7 +402,7 @@
         
     },
     {
-        "name": "",
+        "name": "Sulphonation",
         "named": false,
         "image": "images/",
         "text_form": "",
@@ -414,6 +414,238 @@
         
     },
     {
+        "name": "Acid catalysed Hydration",
+        "named": false,
+        "image": "images/",
+        "text_form": "alkene + H3O+ -> R-C(OH)-C(H)-R*",
+        "chemicals_used": ["Alkene","H30+"],
+        "needs": ["H+"],
+        "products": ["alcohol"],
+        "chapter": "alcohols",
+        "tags": ["alcohols from alkene","Marknoinkove Rule","mechanism"]
+        
+    },
+    {
+        "name": "Hydroboration Oxidation",
+        "named": false,
+        "image": "images/",
+        "text_form": "alkene + (H-BH2)2 -> alkanol",
+        "chemicals_used": ["Alkene","B2H6"],
+        "needs": [],
+        "products": ["alkanol"],
+        "chapter": "alcohols",
+        "tags": ["alcohols from alkene","Marknoinkove Rule","mechanism","(H-BH2)2","looks like opposite mark prd"]
+        
+    },{
+        "name": "reduction of CHO CO",
+        "named": false,
+        "image": "images/",
+        "text_form": "RCHO + H2 + Pd ->ROH",
+        "chemicals_used": ["RCHO","RCOR"],
+        "needs": ["pd","NaBH4","Ni"],
+        "products": ["CHO","CO"],
+        "chapter": "alcohols",
+        "tags": ["aldehydes","ketones","aldehydes - 1*","ketones - 2*"]
+        
+    },{
+        "name": "Commercial alcohols",
+        "named": false,
+        "image": "images/",
+        "text_form": "RCOOH + R*OH(H+) -> RCOOR* + H2(CATALYST) -> RCH2OH + R*OH",
+        "chemicals_used": ["RCOOH","ROH","H2"],
+        "needs": ["H+","H2"],
+        "products": ["RCH2OH","ROH"],
+        "chapter": "alcohols",
+        "tags": ["steps"]
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
+        "name": "",
+        "named": false,
+        "image": "images/",
+        "text_form": "",
+        "chemicals_used": [],
+        "needs": [],
+        "products": [],
+        "chapter": "Haloalkanes",
+        "tags": []
+        
+    },{
         "name": "",
         "named": false,
         "image": "images/",
@@ -425,7 +657,6 @@
         "tags": []
         
     }
-    
 
     
 ]
