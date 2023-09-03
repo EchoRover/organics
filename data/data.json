@@ -201,7 +201,8 @@
         ],
         "chapter": "Haloalkanes",
         "tags": [
-            "Haloge Exchange"
+            "Haloge Exchange",
+            "Nucliophilic substitution reaction of RX"
         ]
     },
     {
@@ -275,51 +276,117 @@
         
     },
     {
-        "name": "",
+        "name": "Nucliophilic substitution reaction of RX",
         "named": false,
         "image": "images/",
-        "text_form": "",
-        "chemicals_used": [],
-        "needs": [],
-        "products": [],
+        "text_form": "RX + NaOH - > ROH",
+        "chemicals_used": ["RX"],
+        "needs": ["NaOH","/KOH"],
+        "products": ["ROH"],
         "chapter": "Haloalkanes",
-        "tags": []
+        "tags": ["Nucliophilic substitution","Nucliophile","OH-"]
         
     },
     {
-        "name": "",
+        "name": "Nucliophilic substitution reaction of RX",
         "named": false,
         "image": "images/",
-        "text_form": "",
-        "chemicals_used": [],
-        "needs": [],
-        "products": [],
+        "text_form": "RX + H20 -> ROH",
+        "chemicals_used": ["RX"],
+        "needs": ["H2O"],
+        "products": ["ROH"],
         "chapter": "Haloalkanes",
-        "tags": []
+        "tags": ["Nucliophilic substitution","Nucliophile","H2O"]
+        
+    },{
+        "name": "Williamson's synthesis",
+        "named": true,
+        "image": "images/",
+        "text_form": "RX + NaOR* -> ROR* + NaX",
+        "chemicals_used": ["RX"],
+        "needs": ["NaOR*"],
+        "products": ["ROR*","Nax"],
+        "chapter": "Haloalkanes",
+        "tags": ["Nucliophilic substitution","Nucliophile","ROR*","Nucliophilic substitution reaction of RX"]
+        
+    },{
+        "name": "Nucliophilic substitution reaction of RX",
+        "named": false,
+        "image": "images/",
+        "text_form": "RX + KCN - > RCN",
+        "chemicals_used": ["RX"],
+        "needs": ["KCN"],
+        "products": ["RCN"],
+        "chapter": "Haloalkanes",
+        "tags": ["Nucliophilic substitution","Nucliophile","CN","ionic bonding"]
+        
+    },{
+        "name": "Nucliophilic substitution reaction of RX",
+        "named": false,
+        "image": "images/",
+        "text_form": "RX + AgCN -> RNC",
+        "chemicals_used": ["RX"],
+        "needs": ["AgCN"],
+        "products": ["RNC"],
+        "chapter": "Haloalkanes",
+        "tags": ["Nucliophilic substitution","Nucliophile","Ag-CN:","covalent bonding"]
+        
+    },{
+        "name": "Nucliophilic substitution reaction of RX",
+        "named": false,
+        "image": "images/",
+        "text_form": "RX + KNO2 -> R - O - N =O",
+        "chemicals_used": ["RX"],
+        "needs": ["KNO2"],
+        "products": ["R - O - N =O"],
+        "chapter": "Haloalkanes",
+        "tags": ["Nucliophilic substitution","Nucliophile","o=N-o","ionic bonding"]
+        
+    },{
+        "name": "Nucliophilic substitution reaction of RX",
+        "named": false,
+        "image": "images/",
+        "text_form": "RX + AgNO2 -> RNO2",
+        "chemicals_used": ["RX"],
+        "needs": ["AgNO2"],
+        "products": ["RNO2"],
+        "chapter": "Haloalkanes",
+        "tags": ["Nucliophilic substitution","Nucliophile","Ag-O-N=O:","covalent bonding"]
+        
+    },{
+        "name": "Nucliophilic substitution reaction of RX",
+        "named": false,
+        "image": "images/",
+        "text_form": "RX +liAlH4 -> RH",
+        "chemicals_used": ["RX"],
+        "needs": ["LiAlH4"],
+        "products":["RH"],
+        "chapter": "Haloalkanes",
+        "tags": ["Nucliophilic substitution","Nucliophile","h","reducing agent"]
         
     },
     {
-        "name": "",
-        "named": false,
+        "name": "Grignards Reagent",
+        "named": true,
         "image": "images/",
-        "text_form": "",
-        "chemicals_used": [],
-        "needs": [],
-        "products": [],
+        "text_form": "R-X + Mg -> RMgX",
+        "chemicals_used": ["RX","Mg"],
+        "needs": ["dry ether"],
+        "products": ["RMgX"],
         "chapter": "Haloalkanes",
-        "tags": []
+        "tags": ["prepartion","reaction with metals"]
         
     },
     {
-        "name": "",
+        "name": "Elemination Reaction",
         "named": false,
         "image": "images/",
-        "text_form": "",
-        "chemicals_used": [],
-        "needs": [],
-        "products": [],
+        "text_form": "RX + alcKOH -> R-C=C=R",
+        "chemicals_used": ["RX","alcKOH"],
+        "needs": [""],
+        "products": ["R-C=C-R"],
         "chapter": "Haloalkanes",
-        "tags": []
+        "tags": ["follow zatyseff rule"]
         
     },
     {
@@ -358,6 +425,8 @@
         "tags": []
         
     }
+    
 
     
 ]
+
