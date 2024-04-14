@@ -1,6 +1,45 @@
 
+// Example object
+const exampleObject = {
+    name: "Grooves_Process",
+    named: true,
+    chemicals_used: "ROH",
+    needs: "HCl ,anhy ZnCl2",
+    Products: "RCl + H3O",
+    chapter: "haloalkanes",
+    tags: ["hello", "bas", "why"],
+};
 
 const colors = []
+
+var names = []
+var nameds = []
+var images = []
+var text_forms = []
+var chemicals_useds = []
+var needs = []
+var products = []
+var chapters = []
+var tagsAll = []
+var allthedata = []
+
+
+// sub functions---------------------------------------------------------------
+
+function appendList(data) {
+    names.push(data.name)
+    nameds.push(data.named)
+    images.push(data.name)
+    text_forms.push(data.name)
+    chemicals_useds.push(data.name)
+    needs.push(data.name)
+    products.push(data.name)
+    chapters.push(data.name)
+    tagsAll.push(data.name)
+
+
+
+}
 
 function getRandomElementFromArray(arr) {
     if (!Array.isArray(arr) || arr.length === 0) {
@@ -15,6 +54,48 @@ function removeNullElements(arr) {
     return arr.filter((element) => element !== null);
 }
 
+function convertObjectValuesToLower(obj) {
+    if (typeof obj !== "object" || obj === null) {
+        return obj;
+    }
+
+    if (Array.isArray(obj)) {
+        return obj.map((item) => convertObjectValuesToLower(item));
+    }
+
+    const lowerCasedObject = {};
+    for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            const value = obj[key];
+            lowerCasedObject[key] =
+                typeof value === "string" ? value.toLowerCase() : convertObjectValuesToLower(value);
+        }
+    }
+
+    return lowerCasedObject;
+}
+
+
+
+function convertToLowerCase(value) {
+    if (typeof value === "string") {
+        return value.toLowerCase();
+    } else if (Array.isArray(value)) {
+        return value.map(convertToLowerCase);
+    } else if (typeof value === "object" && value !== null) {
+        const newObj = {};
+        for (const key in value) {
+            if (value.hasOwnProperty(key)) {
+                newObj[key] = convertToLowerCase(value[key]);
+            }
+        }
+        return newObj;
+    } else {
+        return value;
+    }
+}
+
+// div related subs ---------------------------------------------------------------
 
 function createtagdivs(tagsArray) {
 
@@ -38,12 +119,12 @@ function generatetags(data) {
     tagsArray = tagsArray.concat(data.chemicals_used)
     tagsArray = tagsArray.concat(data.needs)
     tagsArray = tagsArray.concat(data.products)
-    if (data.named){
+    if (data.named) {
         tagsArray.push("Named")
     }
 
     tagsArray = removeNullElements(tagsArray)
-    
+
     return tagsArray;
 }
 
@@ -107,64 +188,16 @@ function createreaction(data, uniqueid) {
 
 }
 
-function convertObjectValuesToLower(obj) {
-    if (typeof obj !== "object" || obj === null) {
-      return obj;
-    }
-  
-    if (Array.isArray(obj)) {
-      return obj.map((item) => convertObjectValuesToLower(item));
-    }
-  
-    const lowerCasedObject = {};
-    for (const key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        const value = obj[key];
-        lowerCasedObject[key] =
-          typeof value === "string" ? value.toLowerCase() : convertObjectValuesToLower(value);
-      }
-    }
-  
-    return lowerCasedObject;
-  }
 
-  function convertToLowerCase(value) {
-    if (typeof value === "string") {
-      return value.toLowerCase();
-    } else if (Array.isArray(value)) {
-      return value.map(convertToLowerCase);
-    } else if (typeof value === "object" && value !== null) {
-      const newObj = {};
-      for (const key in value) {
-        if (value.hasOwnProperty(key)) {
-          newObj[key] = convertToLowerCase(value[key]);
-        }
-      }
-      return newObj;
-    } else {
-      return value;
-    }
-  }
-  
-  // Example object
-  const exampleObject = {
-    name: "Grooves_Process",
-    named: true,
-    chemicals_used: "ROH",
-    needs: "HCl ,anhy ZnCl2",
-    Products: "RCl + H3O",
-    chapter: "haloalkanes",
-    tags: ["hello", "bas", "why"],
-  };
-  
-  
-  
-  
-  
-  
-  
 
-function loadDataFromJsonFile(fileUrl) {
+
+
+
+
+
+
+
+async function loadDataFromJsonFile(fileUrl) {
     return fetch(fileUrl)
         .then((response) => {
             if (!response.ok) {
@@ -178,15 +211,20 @@ function loadDataFromJsonFile(fileUrl) {
         });
 }
 
-async function create_all_reactions() {
+
+
+
+function create_all_reaction_divs() {
     try {
         const data = await loadDataFromJsonFile("data/data.json");
         data.forEach((element, index) => {
+            appendList(element)
             tags = createreaction(element, index);
             element.tags = tags
 
             allthedata.push(convertToLowerCase(element))
         });
+
     } catch (error) {
         console.error("Error:", error);
     }
@@ -194,19 +232,7 @@ async function create_all_reactions() {
 
 
 
-
-
-
-// for (i = 1; i < 100; i++) {
-//     createreaction(element)
-
-// }
-
-// createreaction(element)
-
-
-
-
+// after load
 
 function showhidetags(element) {
     const parent = element.parentElement
@@ -225,26 +251,29 @@ function showhidetags(element) {
 
 }
 
+// search functions
 const searchInput = document.getElementById("search");
 function checkIfTextExists(textToFind, tags) {
     return tags.some(tag => tag.toLowerCase().startsWith(textToFind.toLowerCase()));
-  }
+}
 
 searchInput.addEventListener("input", (event) => {
     const value = event.target.value.toLowerCase()
     console.log(value)
-    
-    
-    allthedata.forEach((reaction,index) =>{
-        const isvisible = checkIfTextExists(value,reaction.tags)
+
+
+    allthedata.forEach((reaction, index) => {
+        const isvisible = checkIfTextExists(value, reaction.tags)
         const element = document.getElementById(`id${index}`)
-        element.classList.toggle("hide",!isvisible)
+        element.classList.toggle("hide", !isvisible)
     })
 })
 
 
-allthedata = []
 
-create_all_reactions();
 
-console.log(allthedata)
+
+
+// top level statements
+create_all_reaction_divs();
+

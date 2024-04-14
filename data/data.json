@@ -443,7 +443,7 @@
         "text_form": "RCHO + H2 + Pd ->ROH",
         "chemicals_used": ["RCHO","RCOR"],
         "needs": ["pd","NaBH4","Ni"],
-        "products": ["CHO","CO"],
+        "products": ["ROH","ROH"],
         "chapter": "alcohols",
         "tags": ["aldehydes","ketones","aldehydes - 1*","ketones - 2*"]
         
