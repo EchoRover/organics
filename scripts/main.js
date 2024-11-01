@@ -214,7 +214,7 @@ async function loadDataFromJsonFile(fileUrl) {
 
 
 
-function create_all_reaction_divs() {
+async function create_all_reaction_divs() {
     try {
         const data = await loadDataFromJsonFile("data/data.json");
         data.forEach((element, index) => {
